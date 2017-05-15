@@ -5,7 +5,7 @@
 
 [Working with MySQL Database Log Files / aws documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Concepts.MySQL.html)
 
-- Set the `general_query_log` parameter to `1`
+- Set the `general_log` parameter to `1`
 
 ## Overview
 ***AWS RDS general_log*** input plugin.
