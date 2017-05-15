@@ -26,7 +26,7 @@ class Rds_GenlogInputTest < Test::Unit::TestCase
           #{insert_general_log_sql}
 
           DROP TABLE IF EXISTS mysql.general_log_backup;
-          RENAME TABLE mysql.geneal_log TO mysql.general_log_backup, mysql.general_log2 TO mysql.general_log;
+          RENAME TABLE mysql.general_log TO mysql.general_log_backup, mysql.general_log2 TO mysql.general_log;
           set @@sql_log_bin=sql_logging;
         END
       EOS
