@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["lagrutta", "jen"]
   gem.email         = ["jen@tune.com"]
   gem.description   = "Amazon RDS gen_log input plugin for Fluent event collector"
-  gem.homepage      = "https://gitlab.com/jen/fluent-plugin-rds-genlog"
+  gem.homepage      = "https://github.com/hasjenL/fluent-plugin-rds-genlog"
   gem.summary       = gem.description
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
