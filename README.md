@@ -25,9 +25,11 @@ every 10 seconds from AWS RDS.
   host [RDS Hostname]
   username [RDS Username]
   password [RDS Password]
-  backup_table [Your Backup Tablename]
+  backup_table [Your Backup Tablename]<-- Optional (Not recommended)
 </source>
 ```
+
+<span style="color:green">PLEASE NOTE: The new backup table (yourdb.general_log_custom_backup) is OPTIONAL.  And can cause performance degradation.  If you simply leave out the backup_table line in the source config, then the script will run the `CALL mysql.rds_rotate_general_log` then do a `SELECT` from the mysql.general_log_backup table.  This is the most efficient way to both manage the logs and also the most efficient way to use this plugin.</span> 
 
 ### Example GET RDS general_log
 
