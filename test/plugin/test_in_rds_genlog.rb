@@ -114,9 +114,9 @@ class Rds_GenlogInputTest < Test::Unit::TestCase
     end
 
     assert_equal [
-      ["rds-genlog", 1432492200, {"even_time"=>"2015-09-29 15:43:44", "user_host"=>"root@localhost", "command_type"=>"QUERY", "server_id"=>"1", "argument"=>"SELECT 1", "thread_id"=>"0"}],
-      ["rds-genlog", 1432492200, {"even_time"=>"2015-09-29 15:43:44", "user_host"=>"root@localhost", "command_type"=>"QUERY", "server_id"=>"1", "argument"=>"SELECT 2", "thread_id"=>"0"}],
-    ], records
+      ["rds-genlog", 1432492200, {"event_time"=>"2015-09-29 15:43:44", "user_host"=>"root@localhost", "command_type"=>"QUERY", "server_id"=>"1", "argument"=>"SELECT 1", "thread_id"=>"0"}],
+      ["rds-genlog", 1432492200, {"event_time"=>"2015-09-29 15:43:44", "user_host"=>"root@localhost", "command_type"=>"QUERY", "server_id"=>"1", "argument"=>"SELECT 2", "thread_id"=>"0"}],
+  ], records
   end
 
   def test_backup
@@ -136,8 +136,7 @@ class Rds_GenlogInputTest < Test::Unit::TestCase
     end
 
     assert_equal [
-      {"start_time"=>"2015-09-29 15:43:44", "user_host"=>"root@localhost", "command_type"=>"QUERY", "server_id"=>"1", "argument"=>"SELECT 1", "thread_id"=>"0"},
-      {"start_time"=>"2015-09-29 15:43:45", "user_host"=>"root@localhost", "command_type"=>"QUERY", "server_id"=>"1", "argument"=>"SELECT 2", "thread_id"=>"0"},
-    ], records
+      {"event_time"=>"2015-09-29 15:43:44", "user_host"=>"root@localhost", "command_type"=>"QUERY", "server_id"=>"1", "argument"=>"SELECT 1", "thread_id"=>"0"},
+      {"event_time"=>"2015-09-29 15:43:45", "user_host"=>"root@localhost", "command_type"=>"QUERY", "server_id"=>"1", "argument"=>"SELECT 2", "thread_id"=>"0"}], records
   end
 end
