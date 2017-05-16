@@ -1,4 +1,4 @@
-# This plugin was made based off the slowlog plugin code.  This new plugin fluent-plugin-rds-genlog [![Build Status](https://travis-ci.org/jenlagrutta/fluent-plugin-rds-genlog.png)](https://travis-ci.org/jenlagrutta/fluent-plugin-rds-genlog/)
+# This plugin was made based off the slowlog plugin code.  This new plugin fluent-plugin-rds-genlog [![Build Status](https://travis-ci.org/hasjenL/fluent-plugin-rds-genlog.png)](https://travis-ci.org/hasjenL/fluent-plugin-rds-genlog/)
 
 
 ## RDS Setting
